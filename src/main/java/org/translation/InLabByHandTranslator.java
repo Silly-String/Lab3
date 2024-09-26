@@ -3,7 +3,7 @@ package org.translation;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO Task: modify this class so that it also supports the Spanish language code "es" and
+// TODO Task: modify this class so that it also supports the Spanish language code "es" (already done <-- french) and
 //            one more language code of your choice. Each member of your group should add
 //            support for one additional langauge code on a branch; then push and create a pull request on GitHub.
 
@@ -26,7 +26,7 @@ public class InLabByHandTranslator implements Translator {
     @Override
     public List<String> getCountryLanguages(String country) {
         if (CANADA.equals(country)) {
-            return new ArrayList<>(List.of("de", "en", "zh"));
+            return new ArrayList<>(List.of("de", "en", "zh", "es", "fr"));
         }
         return new ArrayList<>();
     }
@@ -52,7 +52,6 @@ public class InLabByHandTranslator implements Translator {
     @Override
     public String translate(String country, String language) {
         String result = null;
-        // TODO Checkstyle: Return count is 5 (max allowed for non-void methods/ lambdas is 2).
         if (country.equals(CANADA)) {
             if ("de".equals(language)) {
                 result = "Kanada";
@@ -62,6 +61,12 @@ public class InLabByHandTranslator implements Translator {
             }
             else if ("zh".equals(language)) {
                 result = "加拿大";
+            }
+            else if ("es".equals(language)) {
+                result = "Canadá";
+            }
+            else if ("fr".equals(language)) {
+                result = "Canada";
             }
         }
         return result;
