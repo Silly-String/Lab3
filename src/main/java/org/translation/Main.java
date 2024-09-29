@@ -27,7 +27,7 @@ public class Main {
         // TODO Task: once you finish the JSONTranslator,
         //            you can use it here instead of the InLabByHandTranslator
         //            to try out the whole program!
-        // Translator translator = new JSONTranslator(null);
+        // Translator translator = new JSONTranslator();
         Translator translator = new InLabByHandTranslator();
 
         runProgram(translator);
